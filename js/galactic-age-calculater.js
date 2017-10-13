@@ -23,4 +23,13 @@ export class GalacticAgeCalculater {
     let earthDays = 365 * age;
     return parseInt(earthDays / 243);
   }
+
+  yearsOnMars(age){
+    let earthDays = 365 * age;
+    return parseInt(earthDays / 686.98)
+  }
+
+  yearsOnJupiter(age){
+    return age * 12;
+  }
 }
