@@ -1,12 +1,12 @@
 {
-  "name": "galactic-age-calculator",
-  "description": "#### _Super Galactic Age Calculator: Solo Epicodus exercise, 10.13.2017_",
+  "name": "galactic-age-calculater",
+  "description": "#### _Super Galactic Age calculater: Solo Epicodus exercise, 10.13.2017_",
   "main": "index.js",
   "authors": [
     "Elrey Belmonti <elbelmonti@gmail.com>"
   ],
   "license": "ISC",
-  "homepage": "https://github.com/ElreyB/Super-Galactic-Age-Calculator.git",
+  "homepage": "https://github.com/ElreyB/Super-Galactic-Age-calculater.git",
   "ignore": [
     "**/.*",
     "node_modules",

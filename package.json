@@ -1,21 +1,21 @@
 {
-  "name": "galactic-age-calculator",
+  "name": "galactic-age-calculater",
   "version": "1.0.0",
-  "description": "#### _Super Galactic Age Calculator: Solo Epicodus exercise, 10.13.2017_",
+  "description": "#### _Super Galactic Age calculater: Solo Epicodus exercise, 10.13.2017_",
   "main": "index.js",
   "scripts": {
     "test": "karma start karma.conf.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ElreyB/Super-Galactic-Age-Calculator.git"
+    "url": "git+https://github.com/ElreyB/Super-Galactic-Age-calculater.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/ElreyB/Super-Galactic-Age-Calculator/issues"
+    "url": "https://github.com/ElreyB/Super-Galactic-Age-calculater/issues"
   },
-  "homepage": "https://github.com/ElreyB/Super-Galactic-Age-Calculator#readme",
+  "homepage": "https://github.com/ElreyB/Super-Galactic-Age-calculater#readme",
   "devDependencies": {
     "babel-preset-es2015": "^6.24.1",
     "babelify": "^7.3.0",

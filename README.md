@@ -1,6 +1,6 @@
-# _Super Galactic Age Calculator_
+# _Super Galactic Age calculater_
 
-#### _Super Galactic Age Calculator: Solo Epicodus exercise, 10.13.2017_
+#### _Super Galactic Age calculater: Solo Epicodus exercise, 10.13.2017_
 
 ## Description
 
