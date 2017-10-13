@@ -1,18 +1,13 @@
-// var Converter = require('./../js/roman-numeral.js').converterModule;
-import { Converter } from './../js/roman-numeral.js';
+import { GalacticAgeCalculater } from './../js/galactic-age-calculater.js';
 
-describe('Converter', function(){
-  var converter;
+describe('GalacticAgeCalculater', function(){
+  var calculater;
 
   beforeEach(function() {
-    converter = new Converter()
+    calculater = new GalacticAgeCalculater(37)
   });
 
-  it('should return the roman number of an arabic number', function(){
-    expect(converter.romanNumeralsConverter(20)).toEqual("XX")
-  });
-
-  it('should return the roman number of an arabic number', function(){
-    expect(converter.romanNumeralsConverter(10)).toEqual("X")
+  it ("should return age in years", function(){
+    expect(calculater.age).toEqual(37)
   });
 });
