@@ -4,6 +4,7 @@ body {
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
+  color: white;
 }
 
 .panel {
@@ -15,5 +16,25 @@ body {
 
 .page-header {
   text-align: center;
+}
+
+.panel_color, .panel {
+  background-color: #272852;
+  border-color: #272852;
+}
+
+h4, p{
+  text-align: center;
+}
+
+.thumbnail {
+  background-color: #272852;
+}
+
+.thumbnail h4, .thumbnail p {
   color: white;
+}
+
+p {
+  font-size: 30px;
 }
