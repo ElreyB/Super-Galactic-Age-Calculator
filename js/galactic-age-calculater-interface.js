@@ -1,2 +1,8 @@
-// var Converter = require('./../js/roman-numeral.js').converterModule;
-import { Converter } from './../js/galactic-age-calculater.js';
+import { GalacticAgeCalculater } from './../js/galactic-age-calculater.js';
+
+$(document).ready(function(){
+  $('.age-form').submit(function(e){
+    e.preventDefault();
+    const ageInput = 
+  })
+});

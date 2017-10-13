@@ -1,7 +1,7 @@
 body {
-  background-color: red;
-}
-
-p {
-  font-size: 40px;
+  background-image: url('../../img/space_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
 }
