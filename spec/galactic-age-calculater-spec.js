@@ -19,5 +19,9 @@ describe('GalacticAgeCalculater', function(){
     expect(calculateAge.yearsOnMercury(37)).toEqual(153)
   });
 
+  it ("should return age in Mercury years", function(){
+    expect(calculateAge.yearsOnVenus(37)).toEqual(55)
+  });
+
 
 });

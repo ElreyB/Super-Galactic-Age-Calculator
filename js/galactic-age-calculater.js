@@ -20,6 +20,7 @@ export class GalacticAgeCalculater {
   }
 
   yearsOnVenus(age){
-    return age * 243;
+    let earthDays = 365 * age;
+    return parseInt(earthDays / 243);
   }
 }
