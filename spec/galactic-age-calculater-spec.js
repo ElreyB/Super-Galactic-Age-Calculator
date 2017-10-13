@@ -1,13 +1,21 @@
 import { GalacticAgeCalculater } from './../js/galactic-age-calculater.js';
 
 describe('GalacticAgeCalculater', function(){
-  var calculater;
+  var calculateAge;
 
   beforeEach(function() {
-    calculater = new GalacticAgeCalculater(37)
+    calculateAge = new GalacticAgeCalculater()
   });
 
-  it ("should return age in years", function(){
-    expect(calculater.age).toEqual(37)
+  it ("should return age in Earth seconds", function(){
+    expect(calculateAge.secondsOnEarth(37)).toEqual(1166832000)
+  });
+
+  it("should return dates difference in seconds", function(){
+    expect(calculateAge.secondsByDates('10-13-2017', '01-22-1980')).toEqual(1166832000)
+  });
+
+  it ("should return age in Mercury years", function(){
+    expect(calculateAge.yearsOnMercury(37)).toEqual(3254.89)
   });
 });
