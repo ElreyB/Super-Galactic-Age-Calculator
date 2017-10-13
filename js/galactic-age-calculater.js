@@ -15,6 +15,11 @@ export class GalacticAgeCalculater {
   }
 
   yearsOnMercury(age){
-    return age * 87.97
+    
+    return age * 87.97;
+  }
+
+  yearsOnVenus(age){
+    return age * 243;
   }
 }
