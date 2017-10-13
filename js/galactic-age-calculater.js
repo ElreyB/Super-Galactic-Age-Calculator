@@ -15,8 +15,8 @@ export class GalacticAgeCalculater {
   }
 
   yearsOnMercury(age){
-    
-    return age * 87.97;
+    let earthDays = 365 * age;
+    return parseInt(earthDays / 87.97);
   }
 
   yearsOnVenus(age){
