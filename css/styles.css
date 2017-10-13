@@ -1,13 +1,19 @@
 body {
+  background-image: url('../../img/space_background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.panel {
   background-image: url('../../img/stars.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
 
-.panel {
-  background-image: url('../../img/space_background.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.page-header {
+  text-align: center;
+  color: white;
 }
