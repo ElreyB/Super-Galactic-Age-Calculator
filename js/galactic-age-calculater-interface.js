@@ -4,16 +4,16 @@ $(document).ready(function(){
   $('.age-form').submit(function(e){
     e.preventDefault();
     const ageInput = parseInt($('input#age').val());
-    const galacticAgeCalculater = new GalacticAgeCalculater();
+    const galacticAgeCalculater = new GalacticAgeCalculater(ageInput);
 
-    $('.earth-seconds').text(galacticAgeCalculater.secondsOnEarth(ageInput));
+    $('.earth-seconds').text(galacticAgeCalculater.secondsOnEarth());
 
-    $('.mercury-years').text(galacticAgeCalculater.yearsOnMercury(ageInput));
+    $('.mercury-years').text(galacticAgeCalculater.yearsOnMercury());
 
-    $('.venus-years').text(galacticAgeCalculater.yearsOnVenus(ageInput));
+    $('.venus-years').text(galacticAgeCalculater.yearsOnVenus());
 
-    $('.mars-years').text(galacticAgeCalculater.yearsOnMars(ageInput));
+    $('.mars-years').text(galacticAgeCalculater.yearsOnMars());
 
-    $('.jupiter-years').text(galacticAgeCalculater.yearsOnJupiter(ageInput));
+    $('.jupiter-years').text(galacticAgeCalculater.yearsOnJupiter());
   });
 });
