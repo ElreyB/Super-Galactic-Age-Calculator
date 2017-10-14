@@ -4,6 +4,7 @@ export class GalacticAgeCalculater {
     this.age = options.age
     this.gender = options.gender
     this.smoker = options.smoker
+    this.averageLifeExpectency = 0
   }
 
   secondsOnEarth(){
@@ -34,17 +35,15 @@ export class GalacticAgeCalculater {
     return this.age * 12;
   }
 
-  genderLifeExpectency(){
+  genderaverageLifeExpectency(){
     if (this.gender === "male"){
-      return 76;
+    this.averageLifeExpectency = 76;
     }else{
-      return 81;
+    this.averageLifeExpectency = 81;
     }
   }
-  //
-  // expectencyForSmoker(){
-  //   if (this.smoker){
-  //     this.averageLifeExpectency -= 10
-  //   }
-  // }
+
+  expectencyForSmoker(){
+    this.smoker ? this.averageLifeExpectency -= 10 : 0;
+  }
 }

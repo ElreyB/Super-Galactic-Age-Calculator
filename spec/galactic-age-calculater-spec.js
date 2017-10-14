@@ -35,15 +35,24 @@ describe('GalacticAgeCalculater', function(){
   });
 
   it("should return average age expectency for males", function(){
-    expect(maleUser.genderLifeExpectency()).toEqual(76)
+    maleUser.genderaverageLifeExpectency()
+    expect(maleUser.averageLifeExpectency).toEqual(76)
   });
 
   it("should return average age expectency for female", function(){
-    expect(femaleUser.genderLifeExpectency()).toEqual(81)
+    femaleUser.genderaverageLifeExpectency()
+    expect(femaleUser.averageLifeExpectency).toEqual(81)
   });
 
-  // it("should lower lifeExpectency by 10 years if a smoker", function(){
-  //   maleUser.expectencyForSmoker();
-  //   expect(maleUser.averageLifeExpectency).toEqual(66)
-  // });
+  it("should lower averageLifeExpectency by 10 years if a smoker", function(){
+    maleUser.genderaverageLifeExpectency()
+    maleUser.expectencyForSmoker()
+    expect(maleUser.averageLifeExpectency).toEqual(66)
+  });
+
+  it("should lower averageLifeExpectency by 10 years if a smoker", function(){
+    femaleUser.genderaverageLifeExpectency()
+    femaleUser.expectencyForSmoker()
+    expect(femaleUser.averageLifeExpectency).toEqual(81)
+  });
 });
