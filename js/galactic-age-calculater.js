@@ -3,7 +3,7 @@ export class GalacticAgeCalculater {
     this.earthDays = 365
     this.age = options.age
     this.gender = options.gender
-    this.smoker = options.smoker
+    this.smoker = this.parseBoolean(options.smoker)
     this.exercise = options.exercise
     this.drink = options.drink
     this.averageLifeExpectency = 0
@@ -75,5 +75,9 @@ export class GalacticAgeCalculater {
     }else{
       this.averageLifeExpectency -= 0;
     }
+  }
+
+  parseBoolean(stringBoolean){
+    stringBoolean === "true" ? true : false
   }
 }
