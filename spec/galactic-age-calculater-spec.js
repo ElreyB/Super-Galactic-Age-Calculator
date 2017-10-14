@@ -87,4 +87,16 @@ describe('GalacticAgeCalculater', function(){
     otherUser.expectencyWhenDrinking()
     expect(otherUser.averageLifeExpectency).toEqual(73)
   });
+
+  it("should return calculate life expectency for male", function(){
+    expect(maleUser.calculateLifeExpectency()).toEqual(70)
+  });
+
+  it("should return calculate life expectency for female", function(){
+    expect(femaleUser.calculateLifeExpectency()).toEqual(87)
+  });
+
+  it("should return calculate life expectency", function(){
+    expect(otherUser.calculateLifeExpectency()).toEqual(78)
+  });
 });

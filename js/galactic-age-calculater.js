@@ -37,6 +37,14 @@ export class GalacticAgeCalculater {
     return this.age * 12;
   }
 
+  calculateLifeExpectency(){
+    this.genderaverageLifeExpectency();
+    this.expectencyForSmoker();
+    this.expectencyWhenExercising();
+    this.expectencyWhenDrinking();
+    return this.averageLifeExpectency;
+  }
+
   genderaverageLifeExpectency(){
     if (this.gender === "male"){
     this.averageLifeExpectency = 76;
