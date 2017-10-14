@@ -80,4 +80,5 @@ export class GalacticAgeCalculater {
   parseBoolean(stringBoolean){
     stringBoolean === "true" ? true : false
   }
+  
 }
