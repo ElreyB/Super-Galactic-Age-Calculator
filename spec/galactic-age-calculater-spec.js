@@ -99,4 +99,8 @@ describe('GalacticAgeCalculater', function(){
   it("should return calculate life expectency", function(){
     expect(otherUser.calculateLifeExpectency()).toEqual(78)
   });
+
+  // it("should return calculate life expectency on Mercury", function(){
+  //
+  // });
 });

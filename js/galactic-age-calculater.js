@@ -45,6 +45,22 @@ export class GalacticAgeCalculater {
     return this.averageLifeExpectency;
   }
 
+  expectencyOnPlanet(planet){
+    if (planet === "Earth"){
+      return this.calculateLifeExpectency;
+    }else if (planet === "Mercury"){
+      return parseInt((this.earthDays * this.calculateLifeExpectency) / 87.97);
+    }else if (planet === "Venus"){
+      return parseInt((this.earthDays * this.calculateLifeExpectency) / 243);
+    }else if (planet === "Mars"){
+      return parseInt((this.earthDays * this.age) / 686.98)
+    }else if (planet === "Jupiter") {
+      return this.calculateLifeExpectency * 12;
+    }else {
+      return "No data on planet."
+    }
+  }
+
   genderaverageLifeExpectency(){
     if (this.gender === "male"){
     this.averageLifeExpectency = 76;
