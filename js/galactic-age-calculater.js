@@ -1,7 +1,9 @@
 export class GalacticAgeCalculater {
-  constructor(age){
-    this.earthDays = 365;
-    this.age = age;
+  constructor(options){
+    this.earthDays = 365
+    this.age = options.age
+    this.gender = options.gender
+    this.smoker = options.smoker
   }
 
   secondsOnEarth(){
@@ -31,4 +33,18 @@ export class GalacticAgeCalculater {
   yearsOnJupiter(){
     return this.age * 12;
   }
+
+  genderLifeExpectency(){
+    if (this.gender === "male"){
+      return 76;
+    }else{
+      return 81;
+    }
+  }
+  //
+  // expectencyForSmoker(){
+  //   if (this.smoker){
+  //     this.averageLifeExpectency -= 10
+  //   }
+  // }
 }
