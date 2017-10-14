@@ -5,6 +5,7 @@ export class GalacticAgeCalculater {
     this.gender = options.gender
     this.smoker = options.smoker
     this.exercise = options.exercise
+    this.drink = options.drink
     this.averageLifeExpectency = 0
   }
 
@@ -55,6 +56,16 @@ export class GalacticAgeCalculater {
       this.averageLifeExpectency += 7;
     }else{
       this.averageLifeExpectency += 5;
+    }
+  }
+
+  expectencyWhenDrinking(){
+    if(this.drink === 2){
+      this.averageLifeExpectency -= 1;
+    }else if(this.drink === 3){
+      this.averageLifeExpectency -= 3;
+    }else{
+      this.averageLifeExpectency -= 0;
     }
   }
 }

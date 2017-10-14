@@ -6,11 +6,14 @@ describe('GalacticAgeCalculater', function(){
   let otherUser;
 
   beforeEach(function() {
-    maleUser = new GalacticAgeCalculater({ age: 37, gender: "male", smoker: true, exercise: "light" })
+    maleUser = new GalacticAgeCalculater({ age: 37, gender: "male", smoker: true, exercise: "light", drink: 1 })
+    maleUser.genderaverageLifeExpectency()
 
-    femaleUser = new GalacticAgeCalculater({ age: 25, gender: "female", smoker: false, exercise: "medium" })
+    femaleUser = new GalacticAgeCalculater({ age: 25, gender: "female", smoker: false, exercise: "medium", drink: 2 })
+    femaleUser.genderaverageLifeExpectency()
 
-    otherUser = new GalacticAgeCalculater({ age: 50, gender: "male", smoker: false, exercise: "heavy"})
+    otherUser = new GalacticAgeCalculater({ age: 50, gender: "male", smoker: false, exercise: "heavy", drink: 3 })
+    otherUser.genderaverageLifeExpectency()
   });
 
   it ("should return age in Earth seconds", function(){
@@ -38,42 +41,50 @@ describe('GalacticAgeCalculater', function(){
   });
 
   it("should return average age expectency for males", function(){
-    maleUser.genderaverageLifeExpectency()
     expect(maleUser.averageLifeExpectency).toEqual(76)
   });
 
   it("should return average age expectency for female", function(){
-    femaleUser.genderaverageLifeExpectency()
     expect(femaleUser.averageLifeExpectency).toEqual(81)
   });
 
   it("should lower averageLifeExpectency by 10 years if a smoker", function(){
-    maleUser.genderaverageLifeExpectency()
     maleUser.expectencyForSmoker()
     expect(maleUser.averageLifeExpectency).toEqual(66)
   });
 
-  it("should lower averageLifeExpectency by 10 years if a smoker", function(){
-    femaleUser.genderaverageLifeExpectency()
+  it("should not lower averageLifeExpectency by 10 years if a non-smoker", function(){
     femaleUser.expectencyForSmoker()
     expect(femaleUser.averageLifeExpectency).toEqual(81)
   });
 
   it("should add 4 years to averageLifeExpectency", function(){
-    maleUser.genderaverageLifeExpectency()
     maleUser.expectencyWhenExercising()
     expect(maleUser.averageLifeExpectency).toEqual(80)
   });
 
   it("should add 4 years to averageLifeExpectency", function(){
-    femaleUser.genderaverageLifeExpectency()
     femaleUser.expectencyWhenExercising()
     expect(femaleUser.averageLifeExpectency).toEqual(88)
   });
 
   it("should add 4 years to averageLifeExpectency", function(){
-    otherUser.genderaverageLifeExpectency()
     otherUser.expectencyWhenExercising()
     expect(otherUser.averageLifeExpectency).toEqual(81)
+  });
+
+  it("should not lower averageLifeExpectency if drink value is 1", function(){
+    maleUser.expectencyWhenDrinking()
+    expect(maleUser.averageLifeExpectency).toEqual(76)
+  });
+
+  it("should not lower averageLifeExpectency if drink value is 2", function(){
+    femaleUser.expectencyWhenDrinking()
+    expect(femaleUser.averageLifeExpectency).toEqual(80)
+  });
+
+  it("should not lower averageLifeExpectency if drink value is 3", function(){
+    otherUser.expectencyWhenDrinking()
+    expect(otherUser.averageLifeExpectency).toEqual(73)
   });
 });
