@@ -4,6 +4,7 @@ export class GalacticAgeCalculater {
     this.age = options.age
     this.gender = options.gender
     this.smoker = options.smoker
+    this.exercise = options.exercise
     this.averageLifeExpectency = 0
   }
 
@@ -45,5 +46,15 @@ export class GalacticAgeCalculater {
 
   expectencyForSmoker(){
     this.smoker ? this.averageLifeExpectency -= 10 : 0;
+  }
+
+  expectencyWhenExercising(){
+    if(this.exercise === "light"){
+      this.averageLifeExpectency += 4;
+    }else if(this.exercise === "medium"){
+      this.averageLifeExpectency += 7;
+    }else{
+      this.averageLifeExpectency += 5;
+    }
   }
 }

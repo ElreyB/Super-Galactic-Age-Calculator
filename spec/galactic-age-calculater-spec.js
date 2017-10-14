@@ -3,11 +3,14 @@ import { GalacticAgeCalculater } from './../js/galactic-age-calculater.js';
 describe('GalacticAgeCalculater', function(){
   let maleUser;
   let femaleUser;
+  let otherUser;
 
   beforeEach(function() {
-    maleUser = new GalacticAgeCalculater({ age: 37, gender: "male", smoker: true })
+    maleUser = new GalacticAgeCalculater({ age: 37, gender: "male", smoker: true, exercise: "light" })
 
-    femaleUser = new GalacticAgeCalculater({ age: 25, gender: "female", smoker: false })
+    femaleUser = new GalacticAgeCalculater({ age: 25, gender: "female", smoker: false, exercise: "medium" })
+
+    otherUser = new GalacticAgeCalculater({ age: 50, gender: "male", smoker: false, exercise: "heavy"})
   });
 
   it ("should return age in Earth seconds", function(){
@@ -54,5 +57,23 @@ describe('GalacticAgeCalculater', function(){
     femaleUser.genderaverageLifeExpectency()
     femaleUser.expectencyForSmoker()
     expect(femaleUser.averageLifeExpectency).toEqual(81)
+  });
+
+  it("should add 4 years to averageLifeExpectency", function(){
+    maleUser.genderaverageLifeExpectency()
+    maleUser.expectencyWhenExercising()
+    expect(maleUser.averageLifeExpectency).toEqual(80)
+  });
+
+  it("should add 4 years to averageLifeExpectency", function(){
+    femaleUser.genderaverageLifeExpectency()
+    femaleUser.expectencyWhenExercising()
+    expect(femaleUser.averageLifeExpectency).toEqual(88)
+  });
+
+  it("should add 4 years to averageLifeExpectency", function(){
+    otherUser.genderaverageLifeExpectency()
+    otherUser.expectencyWhenExercising()
+    expect(otherUser.averageLifeExpectency).toEqual(81)
   });
 });
