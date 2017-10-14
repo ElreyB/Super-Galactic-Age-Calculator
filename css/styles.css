@@ -9,9 +9,8 @@ body {
 
 .panel {
   background-image: url('../../img/stars.jpg');
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .page-header {
