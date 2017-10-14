@@ -1,35 +1,34 @@
 export class GalacticAgeCalculater {
-  constructor(){
+  constructor(age){
+    this.earthDays = 365;
+    this.age = age;
   }
 
-  secondsOnEarth(age){
-    return age * 31536000;
+  secondsOnEarth(){
+    return this.age * 31536000;
   }
 
   secondsByDates(mostCurentDate, otherDate){
     let date1 = new Date(mostCurentDate);
     let date2 = new Date(otherDate);
-    let difference = date1.getUTCFullYear() - date2.getUTCFullYear();
+    let difference = (date1.getTime() - date2.getTime()) / 1000;
 
-    return this.secondsOnEarth(difference);
+    return parseInt(difference);
   }
 
-  yearsOnMercury(age){
-    let earthDays = 365 * age;
-    return parseInt(earthDays / 87.97);
+  yearsOnMercury(){
+    return parseInt((this.earthDays * this.age) / 87.97);
   }
 
-  yearsOnVenus(age){
-    let earthDays = 365 * age;
-    return parseInt(earthDays / 243);
+  yearsOnVenus(){
+    return parseInt((this.earthDays * this.age) / 243);
   }
 
-  yearsOnMars(age){
-    let earthDays = 365 * age;
-    return parseInt(earthDays / 686.98)
+  yearsOnMars(){
+    return parseInt((this.earthDays * this.age) / 686.98)
   }
 
-  yearsOnJupiter(age){
-    return age * 12;
+  yearsOnJupiter(){
+    return this.age * 12;
   }
 }
