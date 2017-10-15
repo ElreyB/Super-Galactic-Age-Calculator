@@ -6,13 +6,13 @@ describe('GalacticAgeCalculater', function(){
   let otherUser;
 
   beforeEach(function() {
-    maleUser = new GalacticAgeCalculater({ age: 37, gender: "male", smoker: true, exercise: "light", drink: 1 })
+    maleUser = new GalacticAgeCalculater({ age: 37, gender: "male", smoker: "true", exercise: "light", drink: 1 })
     maleUser.genderaverageLifeExpectency()
 
-    femaleUser = new GalacticAgeCalculater({ age: 25, gender: "female", smoker: false, exercise: "medium", drink: 2 })
+    femaleUser = new GalacticAgeCalculater({ age: 25, gender: "female", smoker: "false", exercise: "medium", drink: 2 })
     femaleUser.genderaverageLifeExpectency()
 
-    otherUser = new GalacticAgeCalculater({ age: 50, gender: "male", smoker: false, exercise: "heavy", drink: 3 })
+    otherUser = new GalacticAgeCalculater({ age: 50, gender: "male", smoker: "false", exercise: "heavy", drink: 3 })
     otherUser.genderaverageLifeExpectency()
   });
 
@@ -100,7 +100,23 @@ describe('GalacticAgeCalculater', function(){
     expect(otherUser.calculateLifeExpectency()).toEqual(78)
   });
 
-  // it("should return calculate life expectency on Mercury", function(){
-  //
-  // });
+  it("should return calculate life expectency on Earth", function(){
+    expect(maleUser.expectencyOnPlanet("Earth")).toEqual(70)
+  });
+
+  it("should return calculate life expectency on Mercury", function(){
+    expect(maleUser.expectencyOnPlanet("Mercury")).toEqual(290)
+  });
+
+  it("should return calculate life expectency on Venus", function(){
+    expect(maleUser.expectencyOnPlanet("Venus")).toEqual(105)
+  });
+
+  it("should return calculate life expectency on Mars", function(){
+    expect(maleUser.expectencyOnPlanet("Mars")).toEqual(37)
+  });
+
+  it("should return calculate life expectency on Jupiter", function(){
+    expect(maleUser.expectencyOnPlanet("Jupiter")).toEqual(840)
+  });
 });

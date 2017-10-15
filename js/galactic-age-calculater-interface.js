@@ -19,5 +19,14 @@ $(document).ready(function(){
     $('.mars-years').text(galacticAgeCalculater.yearsOnMars());
 
     $('.jupiter-years').text(galacticAgeCalculater.yearsOnJupiter());
+
+    const planets = ["Earth", "Mercury", "Venus", "Mars", "Jupiter"];
+    $.each(planets,function(index, planet){
+      $(`.${planet.toLowerCase()}-expectency`).text(galacticAgeCalculater.expectencyOnPlanet(planet));
+    });
+
   });
+
+
+
 });

@@ -1,12 +1,12 @@
 export class GalacticAgeCalculater {
   constructor(options){
-    this.earthDays = 365
-    this.age = options.age
-    this.gender = options.gender
-    this.smoker = this.parseBoolean(options.smoker)
-    this.exercise = options.exercise
-    this.drink = options.drink
-    this.averageLifeExpectency = 0
+    this.earthDays = 365;
+    this.age = options.age;
+    this.gender = options.gender;
+    this.smoker = this.parseBoolean(options.smoker);
+    this.exercise = options.exercise;
+    this.drink = options.drink;
+    this.averageLifeExpectency = 0;
   }
 
   secondsOnEarth(){
@@ -30,7 +30,7 @@ export class GalacticAgeCalculater {
   }
 
   yearsOnMars(){
-    return parseInt((this.earthDays * this.age) / 686.98)
+    return parseInt((this.earthDays * this.age) / 686.98);
   }
 
   yearsOnJupiter(){
@@ -47,17 +47,17 @@ export class GalacticAgeCalculater {
 
   expectencyOnPlanet(planet){
     if (planet === "Earth"){
-      return this.calculateLifeExpectency;
+      return this.calculateLifeExpectency();
     }else if (planet === "Mercury"){
-      return parseInt((this.earthDays * this.calculateLifeExpectency) / 87.97);
+      return parseInt((this.earthDays * this.calculateLifeExpectency()) / 87.97);
     }else if (planet === "Venus"){
-      return parseInt((this.earthDays * this.calculateLifeExpectency) / 243);
+      return parseInt((this.earthDays * this.calculateLifeExpectency()) / 243);
     }else if (planet === "Mars"){
-      return parseInt((this.earthDays * this.age) / 686.98)
+      return parseInt((this.earthDays * this.calculateLifeExpectency()) / 686.98);
     }else if (planet === "Jupiter") {
-      return this.calculateLifeExpectency * 12;
+      return this.calculateLifeExpectency() * 12;
     }else {
-      return "No data on planet."
+      return "No data on planet.";
     }
   }
 
@@ -70,7 +70,7 @@ export class GalacticAgeCalculater {
   }
 
   expectencyForSmoker(){
-    this.smoker ? this.averageLifeExpectency -= 10 : 0;
+   return this.smoker ? this.averageLifeExpectency -= 10 : 0;
   }
 
   expectencyWhenExercising(){
@@ -94,7 +94,7 @@ export class GalacticAgeCalculater {
   }
 
   parseBoolean(stringBoolean){
-    return stringBoolean === "true" ? true : false
+    return stringBoolean === "true" ? true : false;
   }
 
 }
