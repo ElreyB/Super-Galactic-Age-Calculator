@@ -13,10 +13,10 @@ export class GalacticAgeCalculater {
     return this.age * 31536000;
   }
 
-  secondsByDates(mostCurentDate, otherDate){
-    let date1 = new Date(mostCurentDate);
-    let date2 = new Date(otherDate);
-    let difference = (date1.getTime() - date2.getTime()) / 1000;
+  static secondsByDates(mostCurentDate, otherDate){
+    const date1 = new Date(mostCurentDate);
+    const date2 = new Date(otherDate);
+    const difference = (date1.getTime() - date2.getTime()) / 1000;
 
     return parseInt(difference);
   }
