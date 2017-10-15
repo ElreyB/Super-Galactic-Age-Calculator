@@ -8,8 +8,17 @@ $(document).ready(function(){
     $(".result span").text(GalacticAgeCalculater.secondsByDates(date1Input, date2Input)).parent().removeClass("hide");
   });
 
+  $("button.form").click(function(){
+    $(".date").addClass('hide');
+    $("div.information-form").removeClass('hide');
+  });
+
   $('.information-form').submit(function(e){
     e.preventDefault();
+
+    $("div.information-form").addClass('hide');
+    $("div.age-result").removeClass('hide');
+
     const ageInput = parseInt($('input#age').val());
     const genderInput = $("input:radio[name=gender]:checked").val();
     const smokerInput = $("input:radio[name=smoker]:checked").val();
@@ -31,9 +40,15 @@ $(document).ready(function(){
     $.each(planets,function(index, planet){
       $(`.${planet.toLowerCase()}-expectency`).text(galacticAgeCalculater.expectencyOnPlanet(planet));
     });
-
   });
 
+  $('button.expectency-result').click(function(){
+    $("div.age-result").addClass('hide');
+    $("div.expectency-result").removeClass('hide');
+  });
 
-
+  $('button.age-result').click(function(){
+    $("div.expectency-result").addClass('hide');
+    $("div.age-result").removeClass('hide');
+  });
 });
