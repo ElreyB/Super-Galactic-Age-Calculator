@@ -40,3 +40,7 @@ p span{
 .btn {
   border-color: white;
 }
+
+.btn:hover {
+  color: #b87d40;
+}

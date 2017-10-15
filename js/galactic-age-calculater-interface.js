@@ -54,5 +54,14 @@ $(document).ready(function(){
     $("div.age-result").removeClass('hide');
   });
 
+  $('button.return-form').click(function(){
+    $("div.expectency-result").addClass('hide');
+    $("div.age-result").addClass('hide');
+    $("div.information-form").removeClass('hide');
+    $("form.information-form")[0].reset();
+  });
 
+  $("button.return-home").click(function(){
+      window.location.reload(false);
+    });
 });
