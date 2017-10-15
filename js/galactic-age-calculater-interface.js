@@ -8,10 +8,6 @@ $(document).ready(function(){
     $(".result span").text(GalacticAgeCalculater.secondsByDates(date1Input, date2Input)).parent().removeClass("hide");
   });
 
-  $("button.form").click(function(){
-    $(".date").addClass('hide');
-    $("div.information-form").removeClass('hide');
-  });
 
   $('.information-form').submit(function(e){
     e.preventDefault();
@@ -42,6 +38,12 @@ $(document).ready(function(){
     });
   });
 
+// Navigation button clicks for page
+  $("button.form").click(function(){
+    $(".date").addClass('hide');
+    $("div.information-form").removeClass('hide');
+  });
+
   $('button.expectency-result').click(function(){
     $("div.age-result").addClass('hide');
     $("div.expectency-result").removeClass('hide');
@@ -51,4 +53,6 @@ $(document).ready(function(){
     $("div.expectency-result").addClass('hide');
     $("div.age-result").removeClass('hide');
   });
+
+
 });
