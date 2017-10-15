@@ -6,6 +6,7 @@ $(document).ready(function(){
     const date1Input = $("input.recent-date").val();
     const date2Input = $("input.other-date").val();
     $(".result span").text(GalacticAgeCalculater.secondsByDates(date1Input, date2Input)).parent().removeClass("hide");
+    $("form.date-difference")[0].reset();
   });
 
 
@@ -36,6 +37,10 @@ $(document).ready(function(){
     $.each(planets,function(index, planet){
       $(`.${planet.toLowerCase()}-expectency`).text(galacticAgeCalculater.expectencyOnPlanet(planet));
     });
+
+    if(galacticAgeCalculater.age > galacticAgeCalculater.expectencyOnPlanet("Earth")){
+      $('p.surpass').removeClass('hide');
+    }
   });
 
 // Navigation button clicks for page

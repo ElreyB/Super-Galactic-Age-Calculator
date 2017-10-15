@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <title>Super Galactic Age calculater</title>
   </head>
   <body>
@@ -73,8 +74,8 @@
               </div>
             </div>
             <div class="col-sm-3">
-              <div class="form-group col-sm-11 col-sm-offset-1">
-                <label for="smoker">Smoker Status:</label>
+              <div class="form-group col-sm-10 col-sm-offset-2">
+                <label for="smoker">Smoker:</label>
                 <div class="radio">
                   <label>
                     <input type="radio" name="smoker" value="true" required>
@@ -84,7 +85,7 @@
                 <div class="radio">
                   <label>
                     <input type="radio" name="smoker" value="false">
-                    Non-Smoker
+                    NonSmoker
                   </label>
                 </div>
               </div>
@@ -118,12 +119,14 @@
       </div>
       <div class="panel hide age-result">
         <div class="panel-heading panel_color">
+          <p class="disclaimer">Disclaimer: All results are an estimation and currently do not take in account for many factors.</p>
           <div class="text-center">
             <button type="button" class="btn expectency-result">Life Expectency On Planets</button>
             <button type="button" class="btn return-form">New Entry</button>
             <button type="button" class="btn return-home">Return Home</button>
           </div>
         </div>
+        <h2>Your Current age on each Planet</h2>
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
@@ -180,12 +183,14 @@
       </div>
       <div class="panel expectency-result hide">
         <div class="panel-heading panel_color">
+          <p class="disclaimer">Disclaimer: All results are an estimation and currently do not take in account for many factors.</p>
           <div class="text-center">
             <button type="button" class="btn age-result">Age on Planets</button>
             <button type="button" class="btn return-form">New Entry</button>
             <button type="button" class="btn return-home">Return Home</button>
           </div>
         </div>
+        <h2>Life Expectency on each Planet</h2>
         <div class="panel-body">
           <div class="row">
             <div class="col-sm-6 col-sm-offset-3">
@@ -194,6 +199,7 @@
                 <div class="caption">
                   <h4>Life Expectency on Earth</h4>
                   <p><span class="earth-expectency"></span></p>
+                  <p class="surpass hide">You have surpassed your Life Expectency. You are doing something right. Keep it up 👽</p>
                 </div>
               </div>
             </div>

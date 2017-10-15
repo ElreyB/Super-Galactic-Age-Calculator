@@ -5,6 +5,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: white;
+  font-family: 'Space Mono', monospace;
 }
 
 .panel {
@@ -13,7 +14,7 @@ body {
   background-size: contain;
 }
 
-.page-header {
+.page-header, h2 {
   text-align: center;
 }
 
@@ -43,4 +44,8 @@ p span{
 
 .btn:hover {
   color: #b87d40;
+}
+
+.disclaimer, p.surpass {
+  color: #f6d31e;
 }
