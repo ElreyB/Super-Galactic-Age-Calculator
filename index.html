@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="build/css/vendor.css">
     <script src="build/js/vendor.min.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
     <title>Super Galactic Age calculater</title>
   </head>
   <body>
@@ -11,19 +12,124 @@
       <div class="page-header">
         <h1>Super Galactic Age calculater</h1>
       </div>
-      <div class="panel">
-        <div class="panel-heading panel_color">
-          <form class="age-form">
-            <div class="form-group">
-              <label for="age">Enter your age:</label>
-              <input id="age" type="number" class="form-control" min="1" max="300" step="1">
+      <div class="well panel_color date">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="panel">
+              <div class="panel-heading panel_color">
+                <h3>Enter two dates below to see the difference in seconds.....</h3>
+              </div>
+              <div class="panel-body">
+                <form class="date-difference">
+                  <div class="form-group">
+                    <label for="date1">Most Recent Date</label>
+                    <input type="date" class="form-control recent-date" required>
+                  </div>
+                  <div class="form-group">
+                    <label for="date2">Other Date</label>
+                    <input type="date" class="form-control other-date" required>
+                  </div>
+                  <div class="text-center">
+                    <button type="submit" class="btn">Get Seconds</button>
+                  </div>
+                </form>
+              </div>
             </div>
-            <button type="submit" class="btn">Submit</button>
-          </form>
+          </div>
+          <div class="col-sm-6">
+            <div class="well panel_color">
+              <p class="result hide"><span></span>  seconds</p>
+              <p>Did you ever wonder how many seconds you have lived on Earth. Prehaps how old you would be on another planet or life expectency on that planet. Fill out the form and see your results.</p>
+            </div>
+              <div class="text-center">
+                <button type="button" class="btn form">Form</button>
+              </div>
+          </div>
         </div>
+      </div>
+      <div class="well panel_color information-form hide">
+        <form class="information-form">
+          <div class="row">
+            <div class="col-sm-2 col-sm-offset-1">
+              <div class="form-group">
+                <label for="age">Enter your age:</label>
+                <input id="age" type="number" class="form-control" min="1" max="300" step="1" required>
+              </div>
+            </div>
+            <div class="col-sm-1">
+              <div class="form-group">
+                <label for="gender">Gender:</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="gender" value="male" required>
+                    Male
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="gender" value="female">
+                    Female
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-3">
+              <div class="form-group col-sm-10 col-sm-offset-2">
+                <label for="smoker">Smoker:</label>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="smoker" value="true" required>
+                    Smoker
+                  </label>
+                </div>
+                <div class="radio">
+                  <label>
+                    <input type="radio" name="smoker" value="false">
+                    NonSmoker
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="exercise">Amount of exercise:</label>
+                <select class="form-control exercise" required>
+                  <option>Light</option>
+                  <option>Medium</option>
+                  <option>Heavy</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-sm-2">
+              <div class="form-group">
+                <label for="drinks">Drinks per day:</label>
+                <select class="form-control drinks" required>
+                  <option value="1">1 a day</option>
+                  <option value="2">2 to 5 a day</option>
+                  <option value="3">More the 5 a day</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn">Submit</button>
+            <button type="button" class="btn return-home">Return Home</button>
+          </div>
+        </form>
+      </div>
+      <div class="panel hide age-result">
+        <div class="panel-heading panel_color">
+          <p class="disclaimer">Disclaimer: All results are an estimation and currently do not take in account for many factors.</p>
+          <div class="text-center">
+            <button type="button" class="btn expectency-result">Life Expectency On Planets</button>
+            <button type="button" class="btn return-form">New Entry</button>
+            <button type="button" class="btn return-home">Return Home</button>
+          </div>
+        </div>
+        <h2>Your Current age on each Planet</h2>
         <div class="panel-body">
           <div class="row">
-            <div class="col-sm-4 col-sm-offset-4">
+            <div class="col-sm-6 col-sm-offset-3">
               <div class="thumbnail">
                 <img src="img/earth.jpg" alt="Earth">
                 <div class="caption">
@@ -69,6 +175,71 @@
                 <div class="caption">
                   <h4>Age on Jupiter</h4>
                   <p><span class="jupiter-years"></span> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel expectency-result hide">
+        <div class="panel-heading panel_color">
+          <p class="disclaimer">Disclaimer: All results are an estimation and currently do not take in account for many factors.</p>
+          <div class="text-center">
+            <button type="button" class="btn age-result">Age on Planets</button>
+            <button type="button" class="btn return-form">New Entry</button>
+            <button type="button" class="btn return-home">Return Home</button>
+          </div>
+        </div>
+        <h2>Life Expectency on each Planet</h2>
+        <div class="panel-body">
+          <div class="row">
+            <div class="col-sm-6 col-sm-offset-3">
+              <div class="thumbnail">
+                <img src="img/earth.jpg" alt="Earth">
+                <div class="caption">
+                  <h4>Life Expectency on Earth</h4>
+                  <p><span class="earth-expectency"></span></p>
+                  <p class="surpass hide">You have surpassed your Life Expectency. You are doing something right. Keep it up 👽</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="img/mercury.jpg" alt="Mercury">
+                <div class="caption">
+                  <h4>Life Expectency on Mercury </h4>
+                  <p><span class="mercury-expectency"></span></p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="img/venus.jpg" alt="Venus">
+                <div class="caption">
+                  <h4>Life Expectency on Venus</h4>
+                  <p><span class="venus-expectency"></span> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="img/mars.jpg" alt="Mars">
+                <div class="caption">
+                  <h4>Life Expectency on Mars</h4>
+                  <p><span class="mars-expectency"></span> </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="thumbnail">
+                <img src="img/jupiter.jpg" alt="Jupiter">
+                <div class="caption">
+                  <h4>Life Expectency on Jupiter</h4>
+                  <p><span class="jupiter-expectency"></span> </p>
                 </div>
               </div>
             </div>

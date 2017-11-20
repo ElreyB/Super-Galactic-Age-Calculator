@@ -5,16 +5,16 @@ body {
   background-attachment: fixed;
   background-size: cover;
   color: white;
+  font-family: 'Space Mono', monospace;
 }
 
 .panel {
   background-image: url('../../img/stars.jpg');
-  background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
-.page-header {
+.page-header, h2 {
   text-align: center;
 }
 
@@ -34,10 +34,18 @@ h4, p{
   color: white;
 }
 
-p {
+p span{
   font-size: 30px;
 }
 
 .btn {
   border-color: white;
+}
+
+.btn:hover {
+  color: #b87d40;
+}
+
+.disclaimer, p.surpass {
+  color: #f6d31e;
 }

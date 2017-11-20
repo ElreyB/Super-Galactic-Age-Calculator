@@ -8,8 +8,9 @@ _This app will give you your age(seconds on Earth) base on which planet you are 
 
 ## Future Functionality
 
-* Determine how many years a user has left to live on each planet… (yikes!) To do this, the application will have to calculate the user’s life expectancy. (Note that life expectancy shouldn’t be a hard-coded value. After all, it can vary from country to country and depending on various demographics.)
-* If a user has already surpassed the average life expectancy, your application should account for (and test) this possible outcome as well.
+* Get more input from user to calculate a more accurate life expectancy result.
+* Add more planet calculation
+* Show results as Days, Hours, Minutes, Seconds
 
 ## Setup/Installation Requirements
 
